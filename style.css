@@ -1,0 +1,181 @@
+ *,
+  ::before,
+  ::after {
+  box-sizing: border-box;
+  }
+
+ body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  cursor: default;
+  margin-left: 50px;
+  }
+
+ h1, h2, h3 {
+  margin: 0;
+  }
+
+ #hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+ .container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  }
+
+ .hero__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 250px,1fr));
+  grid-gap: 0px;
+  }
+
+ #hero__about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+ #hero__title {
+  font-size: 50px;
+  line-height: 0.5;
+  margin-bottom: 20px;
+  }
+
+ #hero__subtitle {
+  font-size: 38px;
+  font-weight: 400;
+  }
+
+ #hero__links {
+  display: flex;
+  }
+
+ #hero__facebook {
+  margin-right: 18px;
+  font-size: 38px;
+  color: #000;
+  cursor: pointer;
+  }
+
+ #hero__instagram {
+  margin-right: 18px;
+  font-size: 38px;
+  color: #000;
+  cursor: pointer;
+  }
+
+ #hero__whatsapp {
+  margin-right: 18px;
+  font-size: 38px;
+  color: #000;
+  cursor: pointer;
+  }
+
+ #hero__call {
+  margin-right: 18px;
+  font-size: 38px;
+  color: #000;
+  cursor: pointer;
+  }
+
+ #hero__facebook:hover {
+  color: #3b5998;
+  }
+ 
+ #hero__instagram:hover {
+  background:url(img/instagram-bg.png) no-repeat center/cover;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  }
+
+ #hero__whatsapp:hover {
+  color: #25D366;
+  }
+
+ #hero__box {
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  border: 8px solid #fff;
+  background-image: linear-gradient(to right, #41a6ff 0%, #00ffee 100%);
+  animation: ava-animate 25s infinite alternate;
+  box-shadow: 50px 70px 35px rgba(0, 0, 0, .5);
+  }
+
+ #hero__box-img {
+  width: 100%;
+  height: 100%;
+  animation: ava-bg 15s infinite alternate;
+  }
+
+ @media screen and (max-width: 978px) {
+ #hero {
+  padding-top: 30px;
+  }
+
+ .hero__container {
+  grid-row-gap: 20px;
+  }
+
+ #hero__title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  }
+
+ #hero__subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  }
+
+ #hero__description {
+  font-size: 18px;
+  }
+
+ #hero__about {
+  text-align: center;
+  }
+
+ #hero__links {
+  justify-content: center;
+  }
+
+ #hero__box {
+  max-width: 350px;
+  justify-self: center;
+  }
+  }
+
+ @keyframes ava-animate {
+  0% {
+    border-radius: 33% 24% 73% 18% / 26% 68% 32% 74%;
+  }
+  20% {
+    border-radius: 60% 40% 73% 27% / 75% 44% 56% 25%;
+  }
+  40% {
+    border-radius: 52% 48% 36% 64% / 50% 38% 62% 50%;
+  }
+  60% {
+    border-radius: 66% 34% 55% 45% / 70% 59% 41% 30%;
+  }
+  80% {
+    border-radius: 45% 55% 69% 31% / 20% 64% 36% 80%;
+  }
+  100% {
+    border-radius: 45% 55% 39% 61% / 28% 28% 72% 72%;
+  }
+  }
+ @keyframes ava-bg {
+  from {
+  backdrop-filter: hue-rotate(0);
+  }
+  to {
+  backdrop-filter: hue-rotate(90deg);
+  }
+  }
